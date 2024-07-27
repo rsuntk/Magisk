@@ -32,11 +32,8 @@ jobs:
       - name: Setup environment
         uses: ./.github/actions/setup
 
-      - name: Build release
-        run: ./build.py -vr all
-
-      - name: Build debug
-        run: ./build.py -v all
+      - name: Build resetprop
+        run: ./build.py -r binary resetprop
 
       - name: Stop gradle daemon
         run: ./gradlew --stop
