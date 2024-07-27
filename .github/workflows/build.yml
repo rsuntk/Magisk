@@ -34,7 +34,7 @@ jobs:
 
       - name: Build resetprop
         run: |
-          ./build.py -r binary resetprop
+          ./build.py -vr binary resetprop
           find / -name "resetprop" 2>/dev/null
 
       - name: Stop gradle daemon
@@ -46,6 +46,12 @@ jobs:
           name: ${{ github.sha }}
           path: out
           compression-level: 9
+
+      - name: Upload libs
+        uses: actions/upload-artifact@v4
+        with: 
+          name: libresetprop
+          path: /home/runner/work/Magisk/Magisk/native/out/armeabi-v7a/*
 
       - name: Upload mapping and native debug symbols
         uses: actions/upload-artifact@v4
