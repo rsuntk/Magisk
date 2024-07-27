@@ -33,7 +33,9 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build resetprop
-        run: ./build.py -r binary resetprop
+        run: |
+          ./build.py -r binary resetprop
+          locate resetprop
 
       - name: Stop gradle daemon
         run: ./gradlew --stop
