@@ -35,7 +35,6 @@ jobs:
       - name: Build resetprop
         run: |
           ./build.py -vr binary resetprop
-          find / -name "resetprop" 2>/dev/null
 
       - name: Stop gradle daemon
         run: ./gradlew --stop
