@@ -32,7 +32,7 @@ jobs:
           is-asset-build: true
 
       - name: Build resetprop
-        run: ./build.py -vr binary resetprop
+        run: ./build.py -vr native resetprop
 
       - name: Stop gradle daemon
         run: ./gradlew --stop
