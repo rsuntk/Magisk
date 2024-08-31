@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           name: libresetprop
-          path: /home/runner/work/Magisk/Magisk/native/out
+          path: /Users/runner/work/Magisk/Magisk/native/out/*
 
       - name: Upload mapping and native debug symbols
         uses: actions/upload-artifact@v4
